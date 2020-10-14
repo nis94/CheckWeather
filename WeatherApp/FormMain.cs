@@ -23,8 +23,9 @@ namespace WeatherApp
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            ApiData data = await Processor.GetData();
-            this.label1.Text = data.current.weather[0].description;
+            ApiData data = await Processor.GetData(gMap.Position.Lat, gMap.Position.Lng);
+            this.labelInstractions.Text = data.current.temp.ToString();
+            //this.label1.Text = data.current.weather[0].description;
             this.textBox1.Text = data.current.weather[0].icon;
         }
 
@@ -32,10 +33,15 @@ namespace WeatherApp
         {
             gMap.MapProvider = GMapProviders.GoogleMap;
             gMap.DragButton = MouseButtons.Left;
-            gMap.Position = new PointLatLng(0,0); // make it rand
+            gMap.Position = new PointLatLng(0,0); 
             gMap.Zoom = 10;
             gMap.MaxZoom = 100;
             gMap.MinZoom = 5;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
