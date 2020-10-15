@@ -21,14 +21,6 @@ namespace WeatherApp
             InitializeComponent();
         }
 
-        private async void button1_Click(object sender, EventArgs e)
-        {
-            ApiData data = await Processor.GetData(gMap.Position.Lat, gMap.Position.Lng);
-            this.labelInstractions.Text = data.current.temp.ToString();
-            //this.label1.Text = data.current.weather[0].description;
-            this.textBox1.Text = data.current.weather[0].icon;
-        }
-
         private void FormMain_Shown(object sender, EventArgs e)
         {
             gMap.MapProvider = GMapProviders.GoogleMap;
@@ -39,9 +31,10 @@ namespace WeatherApp
             gMap.MinZoom = 5;
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void buttonCheckWeather_Click(object sender, EventArgs e)
         {
-
+            FormWeather formWeather = new FormWeather(gMap.Position.Lat, gMap.Position.Lng);
+            formWeather.ShowDialog();
         }
     }
 }

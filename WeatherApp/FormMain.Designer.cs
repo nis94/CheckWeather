@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.splitContainer = new System.Windows.Forms.SplitContainer();
+            this.buttonFindPlace = new System.Windows.Forms.Button();
+            this.buttonLocationDetails = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.labelInstractions = new System.Windows.Forms.Label();
             this.buttonCheckWeather = new System.Windows.Forms.Button();
             this.gMap = new GMap.NET.WindowsForms.GMapControl();
-            this.buttonLocationDetails = new System.Windows.Forms.Button();
-            this.buttonFindPlace = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
             this.splitContainer.Panel1.SuspendLayout();
             this.splitContainer.Panel2.SuspendLayout();
@@ -64,6 +64,24 @@
             this.splitContainer.SplitterDistance = 358;
             this.splitContainer.TabIndex = 0;
             // 
+            // buttonFindPlace
+            // 
+            this.buttonFindPlace.Location = new System.Drawing.Point(12, 186);
+            this.buttonFindPlace.Name = "buttonFindPlace";
+            this.buttonFindPlace.Size = new System.Drawing.Size(143, 30);
+            this.buttonFindPlace.TabIndex = 4;
+            this.buttonFindPlace.Text = "Find This Place";
+            this.buttonFindPlace.UseVisualStyleBackColor = true;
+            // 
+            // buttonLocationDetails
+            // 
+            this.buttonLocationDetails.Location = new System.Drawing.Point(12, 131);
+            this.buttonLocationDetails.Name = "buttonLocationDetails";
+            this.buttonLocationDetails.Size = new System.Drawing.Size(143, 30);
+            this.buttonLocationDetails.TabIndex = 3;
+            this.buttonLocationDetails.Text = "Location Info";
+            this.buttonLocationDetails.UseVisualStyleBackColor = true;
+            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(175, 194);
@@ -85,11 +103,11 @@
             // 
             this.buttonCheckWeather.Location = new System.Drawing.Point(12, 77);
             this.buttonCheckWeather.Name = "buttonCheckWeather";
-            this.buttonCheckWeather.Size = new System.Drawing.Size(143, 30);
+            this.buttonCheckWeather.Size = new System.Drawing.Size(169, 30);
             this.buttonCheckWeather.TabIndex = 0;
             this.buttonCheckWeather.Text = "Check The Weather";
             this.buttonCheckWeather.UseVisualStyleBackColor = true;
-            this.buttonCheckWeather.Click += new System.EventHandler(this.button1_Click);
+            this.buttonCheckWeather.Click += new System.EventHandler(this.buttonCheckWeather_Click);
             // 
             // gMap
             // 
@@ -119,25 +137,6 @@
             this.gMap.Size = new System.Drawing.Size(694, 514);
             this.gMap.TabIndex = 0;
             this.gMap.Zoom = 0D;
-            // 
-            // buttonLocationDetails
-            // 
-            this.buttonLocationDetails.Location = new System.Drawing.Point(12, 131);
-            this.buttonLocationDetails.Name = "buttonLocationDetails";
-            this.buttonLocationDetails.Size = new System.Drawing.Size(143, 30);
-            this.buttonLocationDetails.TabIndex = 3;
-            this.buttonLocationDetails.Text = "Location Info";
-            this.buttonLocationDetails.UseVisualStyleBackColor = true;
-            this.buttonLocationDetails.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // buttonFindPlace
-            // 
-            this.buttonFindPlace.Location = new System.Drawing.Point(12, 186);
-            this.buttonFindPlace.Name = "buttonFindPlace";
-            this.buttonFindPlace.Size = new System.Drawing.Size(143, 30);
-            this.buttonFindPlace.TabIndex = 4;
-            this.buttonFindPlace.Text = "Find This Place";
-            this.buttonFindPlace.UseVisualStyleBackColor = true;
             // 
             // FormMain
             // 
