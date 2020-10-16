@@ -31,9 +31,8 @@ namespace WeatherApp
             labelTimeZone.Text = data.Timezone;
             labeltemprature.Text = data.current.temp.ToString();
             labelWindSpeed.Text = data.current.wind_speed.ToString();
-            labelSunRise.Text = data.current.sunrise;
-            labelSunSet.Text = data.current.sunset;
-
+            labelSunRise.Text = (DateTimeOffset.FromUnixTimeSeconds(long.Parse(data.current.sunrise))).ToLocalTime().TimeOfDay.ToString();
+            labelSunSet.Text = (DateTimeOffset.FromUnixTimeSeconds(long.Parse(data.current.sunset))).ToLocalTime().TimeOfDay.ToString();
         }
     }
 }

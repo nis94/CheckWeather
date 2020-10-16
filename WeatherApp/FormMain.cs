@@ -26,9 +26,10 @@ namespace WeatherApp
             gMap.MapProvider = GMapProviders.GoogleMap;
             gMap.DragButton = MouseButtons.Left;
             gMap.Position = new PointLatLng(0,0); 
-            gMap.Zoom = 10;
-            gMap.MaxZoom = 100;
-            gMap.MinZoom = 5;
+            gMap.Zoom = 13;
+            gMap.MaxZoom = 18;
+            gMap.MinZoom = 2;
+            gMap.SetPositionByKeywords("Paris, France");
         }
 
         private void buttonCheckWeather_Click(object sender, EventArgs e)
